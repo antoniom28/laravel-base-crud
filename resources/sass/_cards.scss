@@ -1,0 +1,48 @@
+li{
+    position: relative;
+    background-color: #000;
+    color: white;
+    border: 2px ridge white;
+    border-radius: 5px;
+    list-style: none;
+    margin: 10px;
+    width: 320px;
+    min-height: 510px;
+  } 
+
+  .back-face{
+    padding: 10px;
+    overflow: hidden;
+
+    .titolo{
+        height: 15%;
+    }
+
+    .image{
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+    }
+
+    .overview{
+         display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}
+
+.see-details{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+  
+    &:hover{
+        -webkit-text-stroke: 1px yellow;
+    }
+  }
+
+img{
+    width: 100%;
+}

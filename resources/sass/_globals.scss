@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: blue;
+}
+
+span{
+    font-size: 0.85em;
+    color: #c7c7c7;
+}
+
+h1,h2,h3,h4,h5,p{
+    display: inline-block;
+}
+
+[class*="-face"] {
+    width: 94%;
+    height: 94%;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+
+.full-w {
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+  }
+
+  ul.section-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }

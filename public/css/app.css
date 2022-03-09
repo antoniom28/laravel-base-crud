@@ -1,0 +1,95 @@
+li {
+  position: relative;
+  background-color: #000;
+  color: white;
+  border: 2px ridge white;
+  border-radius: 5px;
+  list-style: none;
+  margin: 10px;
+  width: 320px;
+  min-height: 510px;
+}
+
+.back-face {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.back-face .titolo {
+  height: 15%;
+}
+
+.back-face .image {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.back-face .overview {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.see-details {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+.see-details:hover {
+  -webkit-text-stroke: 1px yellow;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: blue;
+}
+
+span {
+  font-size: 0.85em;
+  color: #c7c7c7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  display: inline-block;
+}
+
+[class*="-face"] {
+  width: 94%;
+  height: 94%;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+.full-w {
+  width: 100%;
+  margin-top: 5px;
+  text-align: center;
+  color: white;
+}
+
+ul.section-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
