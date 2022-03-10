@@ -35,14 +35,3 @@ li{
         overflow: hidden;
     }
 }
-
-.see-details{
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-  
-    &:hover{
-        -webkit-text-stroke: 1px yellow;
-    }
-  }

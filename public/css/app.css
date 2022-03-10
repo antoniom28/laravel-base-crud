@@ -1,3 +1,11 @@
+/*@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';*/
+
 li {
   position: relative;
   background-color: #000;
@@ -36,21 +44,14 @@ li {
   overflow: hidden;
 }
 
-.see-details {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-}
-
-.see-details:hover {
-  -webkit-text-stroke: 1px yellow;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-user-select: none;
+          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 body {
@@ -179,5 +180,81 @@ a {
 .turn-back a {
   color: #ffbdbd;
   -webkit-text-stroke: 1px red;
+}
+
+.sub-menu-options {
+  display: none;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 33px;
+  left: 40px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sub-menu-options a:hover {
+  transform: scale(1.2);
+  -webkit-text-decoration: underline yellow;
+          text-decoration: underline yellow;
+}
+
+.sub-menu-options div.delete:hover {
+  transform: scale(1.2);
+  -webkit-text-decoration: underline red;
+          text-decoration: underline red;
+  cursor: pointer;
+}
+
+.show-options {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 5px;
+}
+
+.show-options:hover {
+  -webkit-text-stroke: 1px yellow;
+}
+
+form.confirm-delete {
+  display: none;
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  background: #cfcfcf;
+  z-index: 999;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.button-choice {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.button-choice button,
+.button-choice div.button {
+  width: 60px;
+  padding: 20px 0;
+  border: unset;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background-color: red;
+}
+
+.no-btn {
+  background-color: green;
 }
 
