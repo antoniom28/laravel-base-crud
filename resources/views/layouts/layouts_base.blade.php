@@ -15,14 +15,17 @@
 </html>
 
 <script>
-
-function showOpt(index){
-    let opt = document.querySelectorAll('.sub-menu-options');
-    console.log(opt.length);
+function removeAllOpt(opt , index){
     for(let i=0; i<opt.length; i++){
         if(i!=index)
             opt[i].style.display="none";
     }
+}
+
+function showOpt(index){
+    let opt = document.querySelectorAll('.sub-menu-options');
+    console.log(opt.length);
+    removeAllOpt(opt,index);
 
     if(opt[index].style.display=="flex")
         opt[index].style.display="none";
@@ -37,7 +40,10 @@ function confirmBox(index){
 
 function leaveDelete(){
     let box = document.querySelectorAll('.confirm-delete');
+    let opt = document.querySelectorAll('.sub-menu-options');
     for(let i=0; i<box.length; i++)
         box[i].style.display="none";
+
+    removeAllOpt(opt , -1);
 }
 </script>
