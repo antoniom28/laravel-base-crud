@@ -46,4 +46,9 @@ function leaveDelete(){
 
     removeAllOpt(opt , -1);
 }
+
+function removeDeleteBox(){
+    let box = document.getElementById('delete-mess');
+    box.style.display="none";
+}
 </script>

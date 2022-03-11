@@ -31,19 +31,38 @@
   }
 
   form.confirm-delete{
-      display: none;
-      position: fixed;
-      width: 500px;
-      height: 300px;
-      text-align: center;
-      background: rgb(207, 207, 207);
-      z-index: 999;
-      //top: calc(50% - 250px);
-     // left: calc(50% - 150px);
-     top: 50vh;
-     left: 50vw;
-     transform: translate(-50% , -50%);
-  }
+    display: none;
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    background: rgb(207, 207, 207);
+    z-index: 999;
+    //top: calc(50% - 250px);
+   // left: calc(50% - 150px);
+   top: 50vh;
+   left: 50vw;
+   transform: translate(-50% , -50%);
+}
+
+div#delete-mess{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: fixed;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    background: rgb(207, 207, 207);
+    z-index: 999;
+   top: 50vh;
+   left: 50vw;
+   transform: translate(-50% , -50%);
+
+   .button:hover{
+       color: green;
+   }
+}
 
   .button-choice{
         width: 100%;

@@ -231,6 +231,25 @@ form.confirm-delete {
   transform: translate(-50%, -50%);
 }
 
+div#delete-mess {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  position: fixed;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  background: #cfcfcf;
+  z-index: 999;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+div#delete-mess .button:hover {
+  color: green;
+}
+
 .button-choice {
   width: 100%;
   height: 50%;

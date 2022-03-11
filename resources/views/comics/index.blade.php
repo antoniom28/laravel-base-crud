@@ -1,6 +1,18 @@
 @extends('layouts.layouts_base')
 
 @section('content')
+@if(session()->get('mes')!= '')
+<div id="delete-mess">
+    <h1>
+        {{session()->get('mes')}}
+    </h1>
+    
+    <div onclick="removeDeleteBox()" class="button">
+        <h2>Va bene</h2>
+    </div>
+</div>
+@endif
+
     <h1>
         <a  style="color: red!important" href="{{route("comics.create")}}">
             crea
