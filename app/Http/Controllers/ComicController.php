@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Validation\Rule;
 use App\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+    protected $toValidate = [
+        "title"=>"required|string|max:50|unique:comics",
+        "type"=>[],
+        "price"=>"required|numeric|min:2|between:0,99.99",
+        "series"=>"required|string|max:50",
+        "sale_date"=>"required|string|max:10",
+        "description"=>"string|unique:comics|min:15|max:1000",
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +32,7 @@ class ComicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Comic $comic)
     {
         return view('comics.create');
     }
@@ -36,6 +45,10 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        //,title,{$comic->id}
+        $this->toValidate["type"] = Rule::in(['graphic novel' , 'comic book']);
+        $request->validate($this->toValidate);
+
         $data = $request->all();
 
         $newComic = new Comic();
@@ -82,6 +95,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        //,title,{$comic->id}
+        $this->toValidate["title"] = "required|string|max:40|unique:comics,title,$comic->id";
+        $this->toValidate["description"] = "string|unique:comics,description,$comic->id|min:15|max:1000";
+        $this->toValidate["type"] = Rule::in(['graphic novel' , 'comic book']);
+        $request->validate($this->toValidate);
+
         $data = $request->all();
 
         $comic->title = $data["title"];
